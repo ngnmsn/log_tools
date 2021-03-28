@@ -14,14 +14,17 @@ with open('merge.log', 'w') as merge:
 
 with open('merge.log' ,'r') as merge:
     merge_list = merge.read().splitlines()
-    print("-----merge_list------")
-    print(merge_list)
-    print(type(merge_list))
-    merge_sorted_list = sorted(merge_list)
-    print("-----merge_sorted_list------")
-    print(merge_sorted_list)
-    print(type(merge_sorted_list))
-    with open('merge_sorted.log', 'w') as mergesorted:
-        n = "\n".join(merge_sorted_list)
-        mergesorted.write(n)
+    # print("-----merge_list------")
+    # print(merge_list)
+    # print(type(merge_list))   
+
+merge_sorted_list = sorted(merge_list)
+
+    # print("-----merge_sorted_list------")
+    # print(merge_sorted_list)
+    # print(type(merge_sorted_list))
+    
+with open('merge_sorted.log', 'w') as mergesorted:
+    n = "\n".join(merge_sorted_list)
+    mergesorted.write(n)
 
