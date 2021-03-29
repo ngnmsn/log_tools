@@ -11,7 +11,7 @@ def main():
 
     for i in inlogs:
         df = pd.read_table(i)
-        df.to_csv('./log.csv')
+        df.to_csv('./log.csv', mode='a', index=False, header=False)
     
     print(df.head(10))
     print(df.tail(10))
